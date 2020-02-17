@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>var let const</title>
+	</head>
+	<body>
+		<ul>
+			<li>The difference between var and let envolves the scope, var can cause scope leak. Inside if, while, for</li>
+			<li>Another point is related to performance, the variable will take longer to be destroyed.</li>
+		</ul>
+
+
+		<ul>
+			<li>This is the sequence you need try to create: 1 - const, 2 - leet, 3 - var</li>
+			<li>If I assign a object to a cont, I can change the the value of the object posicions, but not to a const variable .</li>
+		</ul>		
+	</body>
+</html>
+
+<script type="text/javascript">
+
+	// wrong
+	var a = "VALUE CREATED OUTSIDE THE IF";
+
+	if(1 < 2){
+		var a = "VALUE CREATED INSIDE THE IF";
+	}
+	
+	var print = `The variable a is ${a}`;
+
+	console.log(print);
+
+	// correct 
+	// diferent names and using let
+	let a_outside = "VALUE CREATED OUTSIDE THE IF";
+
+	if(1 < 2){
+		var a_inside = "VALUE CREATED INSIDE THE IF";
+	}
+	
+	var print = `The variable a outside is ${a_outside}`;
+
+	console.log(print);	
+
+
+	// good practice 
+	// the point is, use let instead var in both
+	for (let i = Things.length - 1; i >= 0; i--) {
+		Things[i]
+	}
+	for (let i = Things.length - 1; i >= 0; i--) {
+		Things[i]
+	}	
+</script>
