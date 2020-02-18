@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>for of loops</title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+let array = [1,2,3,4,5,6];
+
+let obj = {
+	first_name: "Ligiano",
+	 last_name: "Azzi",
+}
+
+// Old ES5
+/*for(let i in array){
+	console.log(i, array[i]);
+}
+
+for(let i in obj){
+	console.log(i, obj[i]);
+}*/
+
+// New ES6 (the difference is `of` instead `in` )
+for(let value of array){
+	console.log(value);
+}
+
+console.log(array.entries());
+for (let [index, value] of array.entries()){
+	console.log(index,value);
+}
+
+let keys = Object.keys(obj);
+for(let key of keys){
+	console.log(obj[key]);
+	// using the keys to do the loop
+}
+
+
+</script>
