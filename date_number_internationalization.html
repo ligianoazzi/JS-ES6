@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>date number internationalization</title>
+	</head>
+	<body>
+	api Intl
+	</body>
+</html>
+
+<script type="text/javascript">
+
+	let date = new Date();
+
+	var formatted_date = new Intl.DateTimeFormat('pt-BR').format(date); // BCP 47
+	console.log(formatted_date);
+
+	var formatted_date = new Intl.DateTimeFormat('en-US').format(date); // BCP 47
+	console.log(formatted_date);	
+
+	var formatted_date = new Intl.DateTimeFormat('pt-BR', {month: 'long', day: 'numeric', year: 'numeric' }).format(date); // BCP 47
+	console.log(formatted_date);		
+
+/*
+18/02/2020
+18 2/18/2020
+21 18 de fevereiro de 2020
+*/
+
+
+	var number = new Intl.NumberFormat('pt-BR').format(20.22);
+	console.log(number);
+/*
+22,22
+*/
+
+	var number = new Intl.NumberFormat('pt-BR', {minimumFractionDigits: 2}).format(2000);
+	console.log(number);
+/*
+2.000,00
+*/
+
+	var number = new Intl.NumberFormat('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2, currency: 'EUR',style: 'currency'}).format(2000.22222222222222222222);
+	console.log(number);
+/*
+€ 2.000,22
+*/
+</script>
