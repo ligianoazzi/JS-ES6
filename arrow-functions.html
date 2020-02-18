@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>arrow functions</title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+let my_array = [1,2,3,4,5];
+/*let my_array = array.map(function (value){
+	return value * 10;
+});*/
+
+let array2 = my_array.map(value => value * 10); // this will be returned value * 10
+//console.log(array2);
+
+/*
+(5) [10, 20, 30, 40, 50]
+0: 10
+1: 20
+2: 30
+3: 40
+4: 50
+length: 5
+__proto__: Array(0)
+*/
+
+let array3 = my_array.map((value, index) =>{
+	return value * 10 + 1;
+}); // this will be returned value * 10
+//console.log(array3);
+
+
+let my_array_4 = [1,2,3,4,5];
+my_array_4.map(value => value <	 10 ? 0 : 2);
+console.log(my_array_4);
+
+
+let sumFunction = (param1, param2) => param1 + param2;
+
+let result = sumFunction(5,10);
+
+console.log(result);
+
+
+
+</script>
